@@ -1,2 +1,48 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  background-color: #000000;
+  margin: 0;
+  overflow: hidden;
+  perspective: 5500px;
+}
+
+h1 {
+  padding-top: 0px;
+  color: #dcd7d4;
+  color: #dcd7d4;
+  font-size: 80px;
+  text-shadow: 2px 2px teal, 4px 4px teal, 6px 6px teal;
+  animation-name: spin, depth;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 120s;
+  text-align: center;
+}
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(-360deg); }
+}
+@keyframes depth {
+  0 { text-shadow: 0 0 teal; }
+  25% { text-shadow: 1px 1px teal, 2px 2px teal, 3px 3px teal; }
+  50% { text-shadow: 0 0 teal; }
+  75% { text-shadow: -1px -1px teal, -2px -2px teal, -3px -3px teal; }
+  100% { text-shadow: 0 0 teal; }
+}
+
+h1:hover {
+  position: relative;
+  top: -3px;
+  left: -3px;
+  text-shadow: 2px 2px teal, 4px 4px teal, 6px 6px teal, 8px 8px teal, 10px 10px teal, 12px 12px teal;
+  -webkit-transform: scale(2.0);
+  -moz-transform: scale(2.0);
+  -ms-transform: scale(2.0);
+  -o-transform: scale(2.0);
+}
+
+* {
+  font-family: 'Just Me Again Down Here', cursive;
+}
