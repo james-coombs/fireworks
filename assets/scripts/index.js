@@ -2,6 +2,8 @@
 
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
+const fireworks = require('./fireworks/fireworks')
+const ui = require('./main/ui')
 
 $(() => {
   setAPIOrigin(location, config)
